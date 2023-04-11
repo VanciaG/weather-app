@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <!-- setup -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Weather</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./resources/icon-16x16.png" />
+	<link rel="icon" type="image/png" sizes="16x16" href="./resources/icon-32x32.png" />
+    <link href="./style.css" rel="stylesheet">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <main class="weather">
+            <section class="current-weather-temperature">
+                <nav class="nav">
+                    <div class="nav-search">
+                        <input class="search-input" placeholder="Search..." type="search" maxlength="200" id="s" name="s">
+                        <button class="btn-nav btn-search-submit" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon-nav icon-search" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round" data-v-1705e216=""><path stroke="none" d="M0 0h24v24H0z" fill="none" data-v-1705e216=""></path><circle cx="10" cy="10" r="7" data-v-1705e216=""></circle><line x1="21" y1="21" x2="15" y2="15" data-v-1705e216=""></line></svg>
+                        </button>
+                    </div>
+                    <div class="nav-settings">
+                        <button class="btn-nav btn-settings-menu" id="trigger-settings">
+                            <img src="./resources/settings-icon.svg"  class="icon-nav icon-settings" alt="trigger the settings meniu" width="24" height="24">
+                        </button>
+                        <nav class="nav-settings-menu" id="menu-settings">
+                            <div class="dark-light-mode">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon-dark-light-mode" width="16" height="16" viewBox="0 0 25 25"><title>Moon</title><path d="M24.86,15.53a.5.5,0,0,0-.57,0A10.71,10.71,0,0,1,9.57.79.5.5,0,0,0,9,0,12.77,12.77,0,1,0,25,16,.5.5,0,0,0,24.86,15.53Z" fill="#0e1d25"/></svg>
+                                <p class="dark-mode-text">Dark mode</p>
+                                <div class="container">
+                                    <input type="checkbox" id="check"/>
+                                    <label for="check" class="button"></label>
+                                </div>
+                                
+                            </div>
+                            <p class="list-title">Favourite Cities</p>
+                            <ul class="favourite-cities-list">
+                                <li class="item">Timisoara</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </nav>
+                <div class="temperature-card">
+                    <div class="location">
+                        <img src="./resources/location.svg" width="24" height="24">
+                        <p class="city-name">Timisoara</p>
+                    </div>
+                    <div class="flex-weather-description">
+                        <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="weather-icon" width="64" height="64">
+                        <p class="today-date">Today, data</p>
+                        <h1 class="temp">11°C</h1>
+                        <p class="description">Description</p>
+                        <div class="flex">
+                            <img src="./resources/wind.svg" width="16" height="16">
+                            <p class="wind">Wind:</p>
+                            <!--<hr width="1" size="20" style="margin:0 auto" />-->
+                            <p class="wind-speed">19 km/h</p>
+                        </div>
+                        <div class="flex">
+                            <img src="./resources/humidity.svg" width="16" height="16">
+                            <p class="humidity">Humidity:</p>
+                            <!--<hr width="1" size="20" style="margin:0 auto" />-->
+                            <p class="humidity-percentage">22%</p>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="temperature-wrapper">
+                    <p class="temperature-hight">Hight: 11°C</p>
+                    <p class="temperature-low">Low: 11°C</p>
+                </div>
+            </section>
+            <section class="weather-main-panel">
+                    <div class="date-and-time">
+                        <p class="date">Monday, 10 April</p>
+                    </div>
+                    <div class="hourly-weather">
+                        <h2 class="hourly-weather-title">Hourly Forecast</h2>
+                        <div class="hourly-weather-wrapper">
+                            <ul class="hourly-weather-list">
+                                <li class="hourly-weather-item">
+                                    <p class="hour">0:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">1:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">2:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">3:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">4:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">5:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">6:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">7:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">8:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">9:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">10:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">11:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">12:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">13:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">14:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">15:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">16:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">17:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">18:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">19:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">20:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">21:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">22:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                                <li class="hourly-weather-item">
+                                    <p class="hour">23:00</p>
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="hourly-weather-icon">
+                                    <p class="hourly-weather-temperature">11°C</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="weekly-weather">
+                        <h2 class="weekly-weather-title">Weekly Forecast</h2>
+                        <div class="weekly-weather-wrapper">
+                            <ul class="weekly-weather-list">
+                                <li class="weekly-weather-item">
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="week-weather-icon">
+                                    <p class="week-day">Mon</p>
+                                    <p class="weekly-weather-temperature-max">11°C</p>
+                                    <p class="weekly-weather-temperature-min">11°C</p>
+                                </li>
+                                <li class="weekly-weather-item">
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="week-weather-icon">
+                                    <p class="week-day">Tue</p>
+                                    <p class="weekly-weather-temperature-max">11°C</p>
+                                    <p class="weekly-weather-temperature-min">11°C</p>
+                                </li>
+                                <li class="weekly-weather-item">
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="week-weather-icon">
+                                    <p class="week-day">Wed</p>
+                                    <p class="weekly-weather-temperature-max">11°C</p>
+                                    <p class="weekly-weather-temperature-min">11°C</p>
+                                </li>
+                                <li class="weekly-weather-item">
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="week-weather-icon">
+                                    <p class="week-day">Thu</p>
+                                    <p class="weekly-weather-temperature-max">11°C</p>
+                                    <p class="weekly-weather-temperature-min">11°C</p>
+                                </li>
+                                <li class="weekly-weather-item">
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="week-weather-icon">
+                                    <p class="week-day">Fri</p>
+                                    <p class="weekly-weather-temperature-max">11°C</p>
+                                    <p class="weekly-weather-temperature-min">11°C</p>
+                                </li>
+                                <li class="weekly-weather-item">
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="week-weather-icon">
+                                    <p class="week-day">Sat</p>
+                                    <p class="weekly-weather-temperature-max">11°C</p>
+                                    <p class="weekly-weather-temperature-min">11°C</p>
+                                </li>
+                                <li class="weekly-weather-item">
+                                    <img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="Weather description icon" class="week-weather-icon">
+                                    <p class="week-day">Sun</p>
+                                    <p class="weekly-weather-temperature-max">11°C</p>
+                                    <p class="weekly-weather-temperature-min">11°C</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="weather-highlights">
+                        <div class="weather-highlights-card">
+                            <div>
+                                <img src="./resources/precipitation-icon.svg" width="32" height="32">
+                                <p>Precipitation:</p>
+                                <p class="precipitation">0 mm</p>
+                            </div>
+                            <div>
+                                <img src="./resources/pressure-icon.svg" width="32" height="32">
+                                <p>Pressure:</p>
+                                <p class="pressure">1000 mb</p>
+                            </div>
+                            <div>
+                                <img src="./resources/visibility-icon.svg" width="32" height="32">
+                                <p>Visibility:</p>
+                                <p class="visibility">15 km</p>
+                            </div>
+                            <div>
+                                <img src="./resources/uv-icon.svg" width="32" height="32">
+                                <p>UV Index:</p>
+                                <p class="uv-index">3</p>
+                            </div>
+                            <div>
+                                <img src="./resources/sunrise-icon.svg" width="32" height="32">
+                                <p>Sunrise:</p>
+                                <p class="sunrise">07:00 AM</p>
+                            </div>
+                            <div>
+                                <img src="./resources/sunset-icon.svg" width="32" height="32">
+                                <p>Sunset:</p>
+                                <p class="sunset">08:16 PM</p>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+        </main>
+        
+    </div>   
+</body>
+</html>
