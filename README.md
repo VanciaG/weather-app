@@ -1,6 +1,5 @@
 # Weather App
 
-Weather app live here : https://vanciag.github.io/weather-app/
 
 <img width="944" alt="Screenshot_4" src="https://user-images.githubusercontent.com/62344504/231230547-41474be8-625f-4a24-8553-6563f3ea946c.png">
 
